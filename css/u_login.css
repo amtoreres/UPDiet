@@ -1,0 +1,28 @@
+.form form {
+	height: 500px;
+}
+
+.signup {
+	border-bottom: 5px solid transparent;
+}
+
+.signup:hover {
+	border-bottom: 5px solid #F48F1D;
+}
+
+.login {
+	border-bottom: 5px solid #F48F1D;
+}
+
+.login div {
+	background-color: #F48F1D;
+}
+
+.form-input {
+	display: grid;
+	grid-template-rows: auto auto;
+	grid-auto-rows: auto;
+	row-gap: 30px;
+	align-items: center;
+	justify-content: center;
+}

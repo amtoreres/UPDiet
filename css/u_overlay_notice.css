@@ -1,0 +1,12 @@
+.login-notice {
+    width: 100%;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.login-notice a {
+    color: #F48F1D;
+}

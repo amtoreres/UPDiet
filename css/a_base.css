@@ -1,0 +1,29 @@
+button {
+    border: 1px solid #676774;
+    background-color: #DFDFDF;
+    height: 40px;
+}
+
+button:disabled {
+    opacity: 0.6;
+}
+
+button:enabled:hover {
+    background-color: #FFFFFF;
+}
+
+.icon-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 0px;
+    border-left: none;
+}
+
+.icon-button img {
+    width: 20px;
+    height: 20px;
+}
+
+.label-button {
+    padding: 0px 10px;
+}

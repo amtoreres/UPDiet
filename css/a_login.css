@@ -1,0 +1,12 @@
+.form-proper {
+    display: grid;
+    grid-template-rows: repeat(5, max-content);
+    grid-auto-rows: auto;
+    row-gap: 10px;
+}
+
+.form-proper input {
+    height: 30px;
+    padding: 3px 10px;
+    font-family: "Open Sans";
+}

@@ -1,0 +1,105 @@
+button {
+    height: 40px;
+    width: 90px;
+    border-radius: 0px;
+    padding: 5px 10px;
+}
+
+input[type=file] {
+    width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.form-content {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: max-content;
+    justify-content: center;
+}
+
+.form-content fieldset {
+    display: grid;
+    grid-auto-rows: max-content;
+    row-gap: 10px;
+    padding: 20px;
+}
+
+.form-container {
+    display: grid;
+    grid-auto-rows: max-content;
+    grid-template-columns: repeat(3, max-content);
+    row-gap: 10px;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.form-container input {
+    height: 30px;
+    width: 250px;
+    padding: 3px 5px;
+    font-family: "Open Sans";
+}
+
+.form-container select {
+    height: 40px;
+}
+
+.form-submit {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    column-gap: 10px;
+    justify-self: center;
+}
+
+.form-image {
+    display: grid;
+    grid-auto-rows: max-content;
+    row-gap: 10px;
+}
+
+.col-1 {
+    grid-column: 1;
+    justify-self: end;
+}
+
+.col-2 {
+    grid-column: 2;
+}
+
+.col-3 {
+    grid-column: 3;
+}
+
+.tooltip-q {
+	font-size: 12px;
+	color: #B0B0B0;
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.tooltip-q .tooltip {
+	color: #FFFFFF;
+	bottom: 100%;
+	left: 50%;
+    width: 100px;
+	visibility: hidden;
+	background-color: #2F2F2F;
+	text-align: center;
+	padding: 5px;
+	border-radius: 6px;
+	position: absolute;
+	z-index: 1;
+	margin-left: -60px;
+}
+
+.tooltip-q:hover .tooltip {
+	visibility: visible;
+}
+
+.error {
+    margin-top: 10px;
+}

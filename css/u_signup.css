@@ -1,0 +1,76 @@
+.form form {
+	height: 575px;
+}
+
+.login {
+	border-bottom: 5px solid transparent;
+}
+
+.login:hover {
+	border-bottom: 5px solid #F48F1D;
+}
+
+.signup {
+	border-bottom: 5px solid #F48F1D;
+}
+
+.signup div {
+	background-color: #F48F1D;
+}
+
+.submit:enabled:hover {
+	background-color: #F48F1D;
+}
+
+.submit:disabled {
+	opacity: 0.6;
+}
+
+.submit:disabled:hover {
+	background-color: #FFFFFF;
+}
+
+.form-input {
+	display: grid;
+	grid-template-rows: auto auto auto;
+	grid-auto-rows: auto;
+	row-gap: 30px;
+	align-items: center;
+	justify-content: center;
+}
+
+.signup-field {
+	display: grid;
+	grid-template-columns: max-content max-content;
+	grid-auto-columns: auto;
+	column-gap: 10px;
+	align-items: center;
+	justify-content: center;
+}
+
+.tooltip-q {
+	font-size: 12px;
+	color: #B0B0B0;
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.tooltip-q .tooltip {
+	color: #FFFFFF;
+	width: 150px;
+	bottom: 100%;
+	left: 50%;
+	visibility: hidden;
+	background-color: #2F2F2F;
+	text-align: center;
+	padding: 5px;
+	border-radius: 6px;
+	position: absolute;
+	z-index: 1;
+	margin-left: -60px;
+}
+
+.tooltip-q:hover .tooltip {
+	visibility: visible;
+}
