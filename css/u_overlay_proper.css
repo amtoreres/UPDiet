@@ -11,7 +11,7 @@
     display: grid;
     grid-template-columns: max-content auto max-content;
     column-gap: 10px;
-    background-color: #F3E8BB;
+    background-color: #fdf0ac;
     padding: 10px;
     border: 1px solid transparent;
     border-radius: 20px;

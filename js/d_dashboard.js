@@ -2,7 +2,7 @@ $(document).ready(function(){
     // load edit sidebar form on edit button click
     $(".sidebar").on("click", "#edit-prof", function(){
         $(".sidebar").load("../user/edit_profile.php");
-        console.log("test");
+        //console.log("test");
     });
 
     // post data to backend on sidebar edit submit
@@ -28,10 +28,10 @@ $(document).ready(function(){
             success: function(d){
                 // set overlay back to sidebar details on submit
                 $(".sidebar").load("../user/overlay_proper.php");
-                console.log(d);
+                //console.log(d);
             },
             error: function(e){
-                console.log(e); 
+                //console.log(e); 
             }
         });
     });
@@ -80,4 +80,8 @@ $(document).ready(function(){
     });
 
     $("#prof-trigger").trigger("click");
+
+    $(".content").on("click", ".store-content", function(){
+        console.log($(this).attr("id"));
+    })
 });

@@ -33,7 +33,7 @@ input[type=file] {
 
 .nav {
 	/*filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.2));*/
-	background-color: #FFFFFF   ;
+	background-color: #F3E495;
 }
 
 .nav-container {
@@ -42,6 +42,9 @@ input[type=file] {
     grid-template-rows: auto max-content;
     align-items: center;
     row-gap: 20px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    background-color: #ffffff;
 }
 
 .navbar {
@@ -77,7 +80,7 @@ input[type=file] {
 }
 
 .nav-link {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
 }
 
 .nav-link:hover {
@@ -86,7 +89,7 @@ input[type=file] {
 }
 
 .nav-active {
-    border-right: 8px solid #f3e8bb;
+    border-right: 8px solid #fdf0ac;
 }
 
 .logout {
@@ -125,26 +128,6 @@ input[type=file] {
 	.content start
 */
 
-.content {
-    grid-column: 2;
-    background-color: #E4D277;
-}
-
-.content-content {
-    position: relative;
-    z-index: 3;
-}
-
-.content-title {
-    height: 60px;
-    padding: 20px;
-    font-size: 36px;
-    display: flex;
-    align-items: center;
-	filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
-    justify-self: start;
-}
-
 /*
 
     .content end
@@ -156,14 +139,14 @@ input[type=file] {
 /*********************************************************/
 
 /*
-	.profile start
+	.sidebar start
 */
 
 .sidebar {
     display: grid;
     grid-template-rows: max-content;
     width: 400px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     padding: 20px;
     overflow: scroll;
     scroll-behavior: smooth;
@@ -179,7 +162,7 @@ input[type=file] {
     width: 60px;
     height: 60px;
     padding: 15px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     border: 1px solid transparent;
     border-radius: 20px;
 }
