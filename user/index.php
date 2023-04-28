@@ -65,6 +65,9 @@
                 else include('signup.php');
             ?>
         </div>
+        <div class="flair">
+            <img src="../img/background.png">
+        </div>
         <script>
             // set current form page
             <?php if(!isset($_SESSION["u_signin_state"])) $_SESSION["u_signin_state"] = 1; ?>

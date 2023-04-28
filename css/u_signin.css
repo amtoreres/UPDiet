@@ -4,6 +4,10 @@ body {
 	display: grid;
 	grid-template-columns: minmax(max-content, 50%) minmax(max-content, 50%);
 	background-color: #fff7cd;
+    background-image: url("../img/background.png");
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 input {
@@ -311,13 +315,13 @@ input, button:enabled {
 */
 
 .flair {
-	width: 35%;
 	height: 100%;
-	position: fixed;
-	background-image: linear-gradient(#008037, #008037, #008037, rgba(0, 80, 37, 0.2));
-	opacity: 0.4;
 	right: 0;
+	top: 0;
+	position: fixed;
 	z-index: -1;
-	border-top-left-radius: 40%;
-	border-bottom-right-radius: 40%;
+}
+
+.flair img {
+	height: 100%;
 }

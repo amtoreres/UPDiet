@@ -1,13 +1,12 @@
 .content {
     grid-column: 2;
-    background-color: #F3E495;
-    padding: 40px;
     display: grid;
     grid-template-rows: auto;
 }
 
 .content-content {
     background-color: #ffffff;
+    margin: 40px;
     padding: 20px;
     border-radius: 50px;
     display: grid;
