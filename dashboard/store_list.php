@@ -28,9 +28,9 @@
         echo "ka.push(".json_encode($row).");";
     }
     ?>
-
+    /*
     for(var i=0;i<10;i++){
         ka.push(ka[0]);
-    }
+    }*/
 </script>
 <script src="../js/d_store_list.js"></script>
