@@ -9,7 +9,7 @@
         if(!isset($_SESSION["user"])) header("location:../user/");
     ?>
     <head>
-        <title>Browse stores.</title>
+        <title>Dashboard</title>
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,7 +47,7 @@
             </div>
         </div>
         <div class="content">
-            <?php include("store_proper.php") ?>
+            <?php include("dashboard_proper.php") ?>
         </div>
         <div class="sidebar">
             <?php //include("../user/overlay_proper.php"); ?>

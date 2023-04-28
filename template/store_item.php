@@ -1,13 +1,19 @@
-<div class="store-content" 
-     id="s-<?php echo $_POST["u_id"]?>"
-     style="background-image: linear-gradient(to bottom, rgba(0,0,0,0) 1%, rgba(0,0,0,0.9)), url('../<?php echo $_POST["prof_cover"]; ?>');">
-     <div class="store-container">
-        <div class="store-pic">
-            <img src="../<?php echo $_POST['prof_pic'] ?>" >
+<div class="item-content">
+    <div class="item-image">
+        <div>
+            <img src="../<?php echo $_POST["img"]."?".filemtime("../".$_POST["img"]); ?>" >
         </div>
-        <div class="store-info">
-            <span class="store-title"><?php echo $_POST["name"] ?></span>
-            <span class="store-subtitle"><img src="../img/location.png"><span><?php echo $_POST["location"] ?></span></span>
+    </div>
+    <div class="spacer-1"></div>
+    <div class="spacer-2"></div>
+    <div class="item-info">
+        <div class="info-container">
+            <div class="menu-container">
+                <span class="menu-name"><?php echo $_POST["name"] ?></span>
+                <span class="menu-price">&#8369; <?php echo $_POST["price"] ?></span>
+            </div>
         </div>
-     </div>
+    </div>
+    <div class="item-control" id="<?php echo $_POST["menu_id"]; ?>">
+    </div>
 </div>

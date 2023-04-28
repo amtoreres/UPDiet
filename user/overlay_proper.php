@@ -24,28 +24,31 @@
 <link rel="stylesheet" href="../css/u_overlay_proper.css">
 <div class="body-container">
     <div class="profile-content">
-        <div class="img-container">
-            <img id="prof_pic" src="" />
-        </div>
         <div class="profile-info">
-            <div class="info-title">
-                <span><?php echo $usr; ?></span>
+            <div class="img-container">
+                <div>
+                    <img id="prof_pic" src="" />
+                </div>
             </div>
-            <div class="h-sep"></div>
-            <div class="info-detail">
-                <span><?php echo $em; ?></span>
-                <span><?php echo $num; ?></span>
+            <div class="info-container">
+                <div class="info-title">
+                    <span><?php echo $usr; ?></span>
+                </div>
+                <div class="info-detail">
+                    <span><?php echo $em; ?></span>
+                    <span><?php echo $num; ?></span>
+                </div>
             </div>
         </div>
-        <button id="edit-prof" class="button-show" title="Edit profile">
-            <img src="../img/edit.png"/>
-        </button>
     </div>
     <div class="order-content">
         <?php
             include("overlay_order.php");
         ?>
     </div>
+    <button id="edit-prof" class="button-show" title="Edit profile">
+        <img src="../img/edit.png"/>
+    </button>
 </div>
 <script>
     var db_img = "<?php echo $pp; ?>";

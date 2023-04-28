@@ -82,6 +82,8 @@ $(document).ready(function(){
     $("#prof-trigger").trigger("click");
 
     $(".content").on("click", ".store-content", function(){
-        console.log($(this).attr("id"));
+        $.post("../backend/d_store_set.php", {"store": $(this).attr("id")}, function(){
+            window.location.href = "store.php";
+        })
     })
 });
