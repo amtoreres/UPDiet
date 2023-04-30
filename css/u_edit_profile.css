@@ -18,7 +18,7 @@ input[type=text], input[type=password] {
 }
 
 .form-field {
-    background-color: #F3E8BB;
+    background-color: #fdf0ac;
     padding: 20px;
     border-radius: 20px;
 }
@@ -68,7 +68,7 @@ input[type=text], input[type=password] {
     width: 80px;
     height: 45px;
     background-color: #FFFFFF;
-    border: 1px solid #F48F1D;
+    border: 1px solid #fdf0ac;
     border-radius: 50px;
     font-family: "Josefin Sans";
     padding: 5px 10px;
@@ -79,7 +79,7 @@ input[type=text], input[type=password] {
 }
 
 .submit-container button:enabled:hover {
-    background-color: #F48F1D;
+    background-color: #fdf0ac;
 }
 
 .tooltip-header {

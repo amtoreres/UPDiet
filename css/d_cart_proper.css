@@ -1,62 +1,89 @@
-.content-cart {
+.cart-content {
     padding: 20px;
+    display: grid;
+    grid-template-rows: max-content auto;
+    row-gap: 20px;
+}
+
+.cart-title span {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.cart-items {
     display: grid;
     grid-auto-rows: max-content;
     row-gap: 10px;
 }
 
-.item-content {
-    background-color: #F3E8BB;
-    border: 1px solid #F3E8BB;
+.cart-item {
+    background-color: #ffffff;
     border-radius: 20px;
+	filter: drop-shadow(0px 5px 3px rgba(0, 0, 0, 0.2));
     padding: 20px;
+}
+
+.cart-container {
     display: grid;
-    grid-template-columns: max-content auto max-content;
+    grid-template-columns: max-content auto;
     column-gap: 10px;
 }
 
-.item-img {
-    grid-column: 1;
-    width: 75px;
-    height: 75px;
-    background-color: #FFFFFF;
-    border: 1px solid #FFFFFF;
-    border-radius: 20px;
+.cart-img {
+    width: 150px;
+    height: 109px;
     overflow: hidden;
     display: flex;
     align-items: center;
+    justify-content: center;
+    border-radius: 20px;
 }
 
-.item-img img {
-    width: 75px;
+.cart-img img {
+    width: 150px;
 }
 
-.item-info {
-    grid-column: 2;
+.cart-title {
+    font-weight: bold;
+}
+
+.cart-detail {
     display: grid;
-    grid-auto-rows: auto;
-    align-items: center;
+    grid-auto-rows: max-content;
 }
 
-.item-control {
+.cart-info {
     display: grid;
-    grid-template-columns: repeat(3, max-content);
-    column-gap: 10px;
-    align-items: center;
+    grid-template-rows: max-content auto;
 }
 
-.control-button {
-    width: 26px;
-    height: 26px;
+.cart-control {
+    align-self: end;
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    column-gap: 5px;
+}
+
+.cart-control span {
+    height: 24px;
+    width: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #FFFFFF;
-    border: 1px solid #FFFFFF;
-    border-radius: 10px;
+    border-radius: 100%;
 }
 
-.control-button img {
-    width: 16px;
-    height: 16px;
+.cart-button:hover {
+    background-color: #b0b0b0;
+    cursor: pointer;
+}
+
+.cart-control span img {
+    height: 12px;
+    width: 12px;
+}
+
+.cart-quantity {
+    text-align: center;
+    width: 20px;
 }

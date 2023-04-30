@@ -10,30 +10,30 @@
 
     $uid = $_SESSION['user']['u_id'];
 
-    $q = "SELECT a.*, b.quantity, c.name AS store_name FROM store_menu AS a, orders AS b, store_info AS c WHERE a.menu_id=b.menu_id && b.u_id=1 && b.status='cart' && a.u_id=c.u_id ORDER BY b.date;";
+    $q = "SELECT a.menu_id, b.u_id, a.name, a.price, a.img, b.quantity, c.name AS store_name FROM store_menu AS a, customer_cart AS b, store_info AS c WHERE a.menu_id=b.menu_id && b.u_id=$uid && a.u_id=c.u_id ORDER BY b.date DESC;";
     $res = $db->query($q);
 
 ?>
 <link rel="stylesheet" href="../css/d_cart_proper.css">
-<div class="content-content">
-    <div class="content-header">
-        <div class="content-title">
+<div class="cart-content">
+    <div class="cart-header">
+        <div class="cart-title">
             <span>My Cart</span>
         </div>
     </div>
-    <div class="content-cart">
+    <div class="cart-items">
 
     </div>
 </div>
 <script>
-    var ka = [];
+    var kc = [];
 
     <?php 
     while($row = $res->fetch_assoc()) {
-        echo "ka.push(".json_encode($row).");";
+        echo "kc.push(".json_encode($row).");";
     }
     ?>
 
-    //console.log(ka);
+    console.log(kc);
 </script>
 <script src="../js/d_cart_proper.js"></script>
