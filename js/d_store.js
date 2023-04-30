@@ -6,14 +6,36 @@ $(document).ready(function(){
 
         var k = {
             "fetch": true,
-            "u_id": db_uid,
-            "type": $(this).find("span").text()
+            "u_id": db_sid,
+            "type": $(this).find(".cate-type").text()
         };
 
         $(".content-store").load("store_list.php", k, function(d,s){
-            console.log(d);
+            //console.log(d);
         })
     });
 
-    $(".cate-img:first-child").click();
+    $(".content").on("click", ".control-submit", function() {
+        var mid = parseInt($(this).parent().attr("id").split("-")[1])
+        var k = {
+            "u_id": db_uid,
+            "menu_id": mid
+        };
+
+        $.post("../backend/d_cart_add.php", k, function(d,s){
+            if($(`#c-${db_uid}-${mid}`).length != 0) {
+                $(`#c-${db_uid}-${mid} .cart-quantity`).text(d);
+            }
+            else {
+                $.get("../backend/d_cart_data.php", function(d,s){
+                    $.post("../template/cart_item.php", JSON.parse(d), function(d,s){
+                        $(".cart-items").prepend(d);
+                    })
+                });
+            }
+        });
+    });
+
+    $("#cart-trigger").trigger("click");
+    $(".cate-img:first-child").trigger("click");
 });

@@ -1,14 +1,15 @@
 $(".content-cart").ready(function(){
-    if(ka.length > 0) {        
+    if(kc.length > 0) {   
         // ajax with async to prevent break in order
-        ka.forEach(function(i){
+        kc.forEach(function(i){    
+            //console.log(i); 
             $.ajax({
                 type: "POST",
                 url: "../template/cart_item.php",
                 data: i,
                 async: false,
                 success: function(d) {
-                    $(".content-cart").append(d);
+                    $(".cart-items").append(d);
                 }
             })
             /*
@@ -19,6 +20,6 @@ $(".content-cart").ready(function(){
         });
     }
     else {
-        $(".content-cart").text("No results.");
+        //$(".content-cart").text("No results.");
     }
 });

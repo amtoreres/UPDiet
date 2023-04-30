@@ -52,6 +52,7 @@
         <div class="sidebar">
             <?php //include("../user/overlay_proper.php"); ?>
         </div>
+        <script type="module" src="../js/d_base.js"></script>
         <script type="module" src="../js/d_dashboard.js"></script>
     </body> 
 </html>

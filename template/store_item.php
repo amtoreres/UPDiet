@@ -7,13 +7,16 @@
     <div class="spacer-1"></div>
     <div class="spacer-2"></div>
     <div class="item-info">
-        <div class="info-container">
-            <div class="menu-container">
-                <span class="menu-name"><?php echo $_POST["name"] ?></span>
-                <span class="menu-price">&#8369; <?php echo $_POST["price"] ?></span>
+        <div class="item-container">
+            <div class="info-container">
+                <div class="menu-container">
+                    <span class="menu-name"><?php echo $_POST["name"] ?></span>
+                    <span class="menu-price">&#8369;<?php echo $_POST["price"] ?></span>
+                </div>
+            </div>
+            <div class="item-control" id="m-<?php echo $_POST["menu_id"]; ?>">
+                <span class="control-submit"><img src="../img/add.png"></span>
             </div>
         </div>
-    </div>
-    <div class="item-control" id="<?php echo $_POST["menu_id"]; ?>">
     </div>
 </div>

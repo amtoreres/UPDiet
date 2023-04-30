@@ -10,8 +10,9 @@
         if(!isset($_SESSION["store"])) header("location:../dashboard/");
 
         $s = $_SESSION["store"];
+        $u = $_SESSION["user"]["u_id"];
 
-        $q = "SELECT * FROM store_info WHERE u_id=$s;";
+        $q = "SELECT user.email, store_info.* FROM user, store_info WHERE user.u_id=$s && store_info.u_id=$s;";
         $res = $db->query($q);
         $rows = mysqli_fetch_array($res);
 
@@ -61,14 +62,18 @@
                     <div class="content-title">
                         <img class="title-image" src="../img/logo.png">
                         <div class="store-content"
-                             style="background-image: linear-gradient(to bottom, rgba(0,0,0,0) 1%, rgba(0,0,0,0.9)), url('../<?php echo $rows["prof_cover"]; ?>');">>
+                             style="background-image: linear-gradient(to bottom, rgba(0,0,0,0) 1%, rgba(0,0,0,0.9)), url('../<?php echo $rows["prof_cover"]; ?>');">
                              <div class="store-container">
                                 <div class="store-pic">
                                     <img src="../<?php echo $rows['prof_pic'] ?>" >
                                 </div>
                                 <div class="store-info">
                                     <span class="store-title"><?php echo $rows["name"] ?></span>
-                                    <span class="store-subtitle"><img src="../img/location.png"><span><?php echo $rows["location"] ?></span></span>
+                                    <div class="sub-container">
+                                        <span class="store-subtitle"><img src="../img/location.png"><span><?php echo $rows["location"] ?></span></span>
+                                        <span class="store-subtitle"><img src="../img/mail.png"><span><?php echo $rows["email"] ?></span></span>
+                                        <span class="store-subtitle"><img src="../img/contact.png"><span><?php echo $rows["c_num"] ?></span></span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -78,31 +83,31 @@
                     <div class="cate-img">
                         <div>
                             <img src="../img/main_course.png">
-                            <span>Main Course</span>
+                            <span class="cate-type">Main Course</span>
                         </div>
                     </div>
                     <div class="cate-img">
                         <div>
                             <img src="../img/appetizer.png">
-                            <span>Appetizer</span>
+                            <span class="cate-type">Appetizer</span>
                         </div>
                     </div>
                     <div class="cate-img">
                         <div>
                             <img src="../img/dessert.png">
-                            <span>Dessert</span>
+                            <span class="cate-type">Dessert</span>
                         </div>
                     </div>
                     <div class="cate-img">
                         <div>
                             <img src="../img/beverages.png">
-                            <span>Beverage</span>
+                            <span class="cate-type">Beverage</span>
                         </div>
                     </div>
                     <div class="cate-img">
                         <div>
                             <img src="../img/addons.png">
-                            <span>Add-on</span>
+                            <span class="cate-type">Add-on</span>
                         </div>
                     </div>
                 </div>
@@ -115,9 +120,10 @@
             <?php //include("../user/overlay_proper.php"); ?>
         </div>
         <script>
-            var db_uid = <?php echo $s; ?>;
+            var db_uid = <?php echo $u; ?>;
+            var db_sid = <?php echo $s; ?>;
         </script>
-        <script type="module" src="../js/d_dashboard.js"></script>
+        <script type="module" src="../js/d_base.js"></script>
         <script type="module" src="../js/d_store.js"></script>
     </body> 
 </html>
