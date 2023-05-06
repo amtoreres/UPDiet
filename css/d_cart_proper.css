@@ -1,19 +1,20 @@
 .cart-content {
     padding: 20px;
     display: grid;
-    grid-template-rows: max-content auto;
+    grid-template-rows: max-content auto max-content;
     row-gap: 20px;
-}
-
-.cart-title span {
-    font-size: 36px;
-    font-weight: bold;
+    background-image: url(../img/cart-background.png);
+    background-position: bottom;
+    background-size: 60%;
+    background-repeat: no-repeat;
 }
 
 .cart-items {
     display: grid;
     grid-auto-rows: max-content;
     row-gap: 10px;
+    overflow: scroll;
+    scroll-behavior: smooth;
 }
 
 .cart-item {
@@ -74,7 +75,6 @@
 }
 
 .cart-button:hover {
-    background-color: #b0b0b0;
     cursor: pointer;
 }
 
@@ -86,4 +86,58 @@
 .cart-quantity {
     text-align: center;
     width: 20px;
+}
+
+.cart-submit {
+    padding: 10px 30px;
+    background-color: #F48F1D;
+    border-radius: 20px;
+    margin: 0px 50px;
+    display: flex;
+    justify-content: center;
+	filter: drop-shadow(0px 5px 3px rgba(0, 0, 0, 0.2));
+}
+
+.cart-submit:hover {
+    background-color: #b0b0b0;
+    cursor: pointer;
+}
+
+.cart-submit span {
+    text-align: center;
+    color: #ffffff;
+}
+
+.binary-controls {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+}
+
+.binary-button {
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px 0px;
+    background-color: #ffffff;
+	filter: drop-shadow(0px 5px 3px rgba(0, 0, 0, 0.2));
+}
+
+.binary-button:hover {
+    background-color: #b0b0b0;
+    cursor: pointer;
+}
+
+.binary-button-submit:hover {
+    background-color: #b0b0b0;
+    cursor: pointer;
+}
+
+.binary-button-submit {
+    grid-column: 1;
+    background-color: #F48F1D;
+    color: #ffffff;
+}
+
+.binary-button-cancel {
+    grid-column: 2;
 }

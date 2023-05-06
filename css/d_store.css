@@ -10,7 +10,7 @@
     padding: 40px;
     border-radius: 50px;
     display: grid;
-    grid-auto-rows: max-content;
+    grid-template-rows: repeat(2, max-content) auto;
     row-gap: 40px;
 }
 
@@ -137,12 +137,18 @@
     margin-top: 6px;
 }
 
+.content-store {
+    overflow: scroll;
+    scroll-behavior: smooth;
+}
+
 .list-content {
     display: flex;
     flex-direction: row;
-    align-items: center;
     flex-wrap: wrap;
     gap: 40px;
+    overflow: scroll;
+    scroll-behavior: smooth;    
 }
 
 .item-content {

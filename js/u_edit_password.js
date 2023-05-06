@@ -35,13 +35,13 @@ var is_valid_new_pw = false;
 $(document).ready(function(){ 
     $("#submit-prof").attr("disabled", true);
     // check if input matches current pw
-    $(".profile").on("input", "#pw-old", function(){
+    $(".sidebar").on("input", "#pw-old", function(){
         is_valid_old_pw = md5($("#pw-old").val()) == db_pw;
         verify_form();
     });
     
     // check if input is valid new pw
-    $(".profile").on("input", "#pw-new", function(){
+    $(".sidebar").on("input", "#pw-new", function(){
         is_valid_new_pw = is_alphanumeric($("#pw-new").val()) ? true : false;
         verify_form();
     });

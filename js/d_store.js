@@ -1,4 +1,15 @@
+function update_checkout_button() {
+    if($(".cart-items").children().length > 0) {
+        $(".cart-submit").show();
+    }
+    else {
+        $(".cart-submit").hide();
+    }
+}
+
 $(document).ready(function(){
+    $(".content-store").css("max-height", `${Math.round($(".content-store").height())}px`);
+
     $(".content-category").on("click", ".cate-img", function(){
         $(".cate-img").removeClass("cate-active");
         $(this).addClass("cate-active");
@@ -30,7 +41,9 @@ $(document).ready(function(){
                 $.get("../backend/d_cart_data.php", function(d,s){
                     $.post("../template/cart_item.php", JSON.parse(d), function(d,s){
                         $(".cart-items").prepend(d);
-                    })
+
+                        update_checkout_button();
+                    });
                 });
             }
         });

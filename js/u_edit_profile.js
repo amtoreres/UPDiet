@@ -30,18 +30,18 @@ var is_valid_usr = true;
 var is_valid_num = true;
 
 $(document).ready(function(){
-    $(".profile").on("input", "#username", function(){
+    $(".sidebar").on("input", "#username", function(){
         is_valid_usr = $("#username").val().match(/^(?!\s).+(?<!\s)$/) ? true : false;;
         verify_form();
     });
     
-    $(".profile").on("input", "#c_num", function(){
+    $(".sidebar").on("input", "#c_num", function(){
         // allow only 11-digit numeric
         is_valid_num = $("#c_num").val().match(/^$|(09[0-9]{9})+/) ? true : false;
         verify_form();
     });
     
-    $(".profile").on("change", "#prof_pic", function(){
+    $(".sidebar").on("change", "#prof_pic", function(){
         if($("#prof_pic").prop("files").length > 0) {
             var fr = new FileReader();
             fr.onloadend = function(e){

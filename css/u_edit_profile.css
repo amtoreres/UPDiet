@@ -21,6 +21,7 @@ input[type=text], input[type=password] {
     background-color: #fdf0ac;
     padding: 20px;
     border-radius: 20px;
+	filter: drop-shadow(0px 5px 3px rgba(0, 0, 0, 0.2));
 }
 
 .form-container {
@@ -51,27 +52,32 @@ input[type=text], input[type=password] {
 
 .form-button {
     display: grid;
-    grid-template-columns: auto auto max-content;
+    grid-auto-rows: max-content;
     align-items: center;
-    column-gap: 3px;
+    row-gap: 10px;
 }
 
 .submit-container {
-    justify-self: end;
     display: grid;
-    grid-template-columns: repeat(2, max-content);
-    grid-auto-columns: max-content;
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 10px;
 }
 
 .submit-container button {
-    width: 80px;
-    height: 45px;
+    text-align: center;
     background-color: #FFFFFF;
-    border: 1px solid #fdf0ac;
-    border-radius: 50px;
+    border: 1px solid transparent;
+    border-radius: 20px;
     font-family: "Josefin Sans";
-    padding: 5px 10px;
+    font-size: inherit;
+    padding: 10px 0px;
+	filter: drop-shadow(0px 5px 3px rgba(0, 0, 0, 0.2));
+}
+
+#submit-prof {
+    border: 1px solid #F48F1D;
+    background-color: #F48F1D;
+    color: #ffffff;
 }
 
 .submit-container button:disabled {
@@ -79,7 +85,7 @@ input[type=text], input[type=password] {
 }
 
 .submit-container button:enabled:hover {
-    background-color: #fdf0ac;
+    background-color: #b0b0b0;
 }
 
 .tooltip-header {
@@ -106,8 +112,4 @@ input[type=text], input[type=password] {
 
 .tooltip-header:hover span {
 	visibility: visible;
-}
-
-.pw-container:hover a {
-    color: #F48F1D;
 }
