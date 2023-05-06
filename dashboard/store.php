@@ -31,6 +31,12 @@
         <link rel="stylesheet" href="../css/fonts.css">
         <link rel="stylesheet" href="../css/d_base.css">
         <link rel="stylesheet" href="../css/d_store.css">
+        
+        <link rel="stylesheet" href="../css/d_cart_proper.css">
+        <link rel="stylesheet" href="../css/d_cart_checkout.css">
+        <link rel="stylesheet" href="../css/d_cart_success.css">
+
+        <link rel="stylesheet" href="../css/d_order_proper.css">
 
         <script src="../js/jquery-3.6.4.min.js"></script>
     </head>
@@ -70,9 +76,9 @@
                                 <div class="store-info">
                                     <span class="store-title"><?php echo $rows["name"] ?></span>
                                     <div class="sub-container">
-                                        <span class="store-subtitle"><img src="../img/location.png"><span><?php echo $rows["location"] ?></span></span>
-                                        <span class="store-subtitle"><img src="../img/mail.png"><span><?php echo $rows["email"] ?></span></span>
-                                        <span class="store-subtitle"><img src="../img/contact.png"><span><?php echo $rows["c_num"] ?></span></span>
+                                        <span class="store-subtitle"><img src="../img/location_l.png"><span><?php echo $rows["location"] ?></span></span>
+                                        <span class="store-subtitle"><img src="../img/mail_l.png"><span><?php echo $rows["email"] ?></span></span>
+                                        <span class="store-subtitle"><img src="../img/contact_l.png"><span><?php echo $rows["c_num"] ?></span></span>
                                     </div>
                                 </div>
                             </div>

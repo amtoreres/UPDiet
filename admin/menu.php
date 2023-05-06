@@ -27,7 +27,7 @@
             <a class="nav-link" href="profile.php">
                 <span>Profile</span>
             </a>
-            <a class="nav-link">
+            <a class="nav-link" href="order.php">
                 <span>Orders</span>
             </a>
             <a class="nav-link nav-active" href="">

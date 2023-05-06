@@ -1,0 +1,42 @@
+.c-success-content {
+    padding: 20px;
+    display: grid;
+    grid-template-rows: repeat(2, max-content);
+    row-gap: 20px;
+    background-image: url(../img/cart-background.png);
+    background-position: bottom;
+    background-size: 60%;
+    background-repeat: no-repeat;
+}
+
+.c-success-container {
+    display: grid;
+    grid-template-rows: repeat(2, max-content);
+    grid-template-columns: auto;
+    row-gap: 10px;
+    justify-items: center;
+}
+
+.success-img {
+    grid-column: 1;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.success-img img {
+    width: 100px;
+    height: 100px;
+}
+
+.success-txt {
+    text-align: center;
+}
+
+.success-txt span {
+    grid-column: 1;
+    font-size: 24px;
+}

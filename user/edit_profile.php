@@ -54,10 +54,6 @@
             <span class="error" id="error-msg"></span>
         </div>
         <div class="form-button">
-            <div class="pw-container">
-                <a id="edit-pw">Change Password</a>
-            </div>
-            <div class="v-sep"></div>
             <div class="submit-container">
                 <button type="button" id="submit-prof">Save</button>
                 <button type="button" id="cancel-prof">Cancel</button>

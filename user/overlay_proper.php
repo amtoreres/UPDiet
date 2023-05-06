@@ -46,9 +46,14 @@
             include("overlay_order.php");
         ?>
     </div>
-    <button id="edit-prof" class="button-show" title="Edit profile">
-        <img src="../img/edit.png"/>
-    </button>
+    <div class="floating-buttons">
+        <button id="edit-prof" class="button-show" title="Edit profile">
+            <img src="../img/edit.png"/>
+        </button>
+        <button id="edit-pw" class="button-show" title="Edit password">
+            <img src="../img/password.png"/>
+        </button>
+    </div>
 </div>
 <script>
     var db_img = "<?php echo $pp; ?>";

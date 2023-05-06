@@ -14,15 +14,17 @@
     $res = $db->query($q);
 
 ?>
-<link rel="stylesheet" href="../css/d_cart_proper.css">
 <div class="cart-content">
-    <div class="cart-header">
-        <div class="cart-title">
+    <div class="side-header">
+        <div class="side-title">
             <span>My Cart</span>
         </div>
     </div>
     <div class="cart-items">
 
+    </div>
+    <div class="cart-submit">
+        <span>Proceed to Checkout</span>
     </div>
 </div>
 <script>
@@ -33,7 +35,6 @@
         echo "kc.push(".json_encode($row).");";
     }
     ?>
-
-    console.log(kc);
+    //console.log(kc);
 </script>
 <script src="../js/d_cart_proper.js"></script>

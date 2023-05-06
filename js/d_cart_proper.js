@@ -1,4 +1,15 @@
-$(".content-cart").ready(function(){
+function update_checkout_button() {
+    if($(".cart-items").children().length > 0) {
+        $(".cart-submit").show();
+    }
+    else {
+        $(".cart-submit").hide();
+    }
+}
+$(document).ready(function(){
+    //console.log($(".cart-items").height());
+    //$(".cart-items").css("max-height", `${Math.round($(".cart-items").height())}px`);
+
     if(kc.length > 0) {   
         // ajax with async to prevent break in order
         kc.forEach(function(i){    
@@ -18,6 +29,7 @@ $(".content-cart").ready(function(){
             });
             */
         });
+        update_checkout_button();
     }
     else {
         //$(".content-cart").text("No results.");

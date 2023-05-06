@@ -21,6 +21,10 @@
         <link rel="stylesheet" href="../css/base.css">
         <link rel="stylesheet" href="../css/fonts.css">
         <link rel="stylesheet" href="../css/d_base.css">
+        
+        <link rel="stylesheet" href="../css/d_cart_proper.css">
+        <link rel="stylesheet" href="../css/d_cart_checkout.css">
+        <link rel="stylesheet" href="../css/d_cart_success.css">
 
         <script src="../js/jquery-3.6.4.min.js"></script>
     </head>
