@@ -26,6 +26,8 @@
         <link rel="stylesheet" href="../css/d_cart_checkout.css">
         <link rel="stylesheet" href="../css/d_cart_success.css">
 
+        <link rel="stylesheet" href="../css/d_order_proper.css">
+
         <script src="../js/jquery-3.6.4.min.js"></script>
     </head>
     <body>
