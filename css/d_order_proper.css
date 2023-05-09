@@ -9,7 +9,7 @@
     display: grid;
     grid-auto-rows: max-content;
     row-gap: 20px;
-    overflow: scroll;
+    overflow: auto;
     scroll-behavior: smooth;
 }
 
