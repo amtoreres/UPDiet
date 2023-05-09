@@ -7,7 +7,7 @@
         </div>
         <div class="store-info">
             <span class="store-title"><?php echo $_POST["name"] ?></span>
-            <span class="store-subtitle"><img src="../img/location.png"><span><?php echo $_POST["location"] ?></span></span>
+            <span class="store-subtitle"><img src="../img/location_l.png"><span><?php echo $_POST["location"] ?></span></span>
         </div>
      </div>
 </div>
