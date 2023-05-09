@@ -138,7 +138,7 @@
 }
 
 .content-store {
-    overflow: scroll;
+    overflow: auto;
     scroll-behavior: smooth;
 }
 
@@ -147,7 +147,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 40px;
-    overflow: scroll;
+    overflow: auto;
     scroll-behavior: smooth;    
 }
 
