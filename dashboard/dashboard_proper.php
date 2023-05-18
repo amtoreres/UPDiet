@@ -39,7 +39,7 @@
     }
     ?>
     
-    for(var i=0;i<5;i++) ka.push(ka[0]);
+    //for(var i=0;i<5;i++) ka.push(ka[0]);
 
     //console.log(ka);
 </script>
