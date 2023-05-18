@@ -30,6 +30,7 @@
         <span class="info-title">Recipient: <?php echo $rowc["username"] ?></span>
         <span class="info-subtitle">Location: <?php echo $rowt["location"] ?></span>
         <span class="info-subtitle">Email: <?php echo $rowu["email"] ?></span>
+        <span class="info-subtitle">Contact #: <?php echo $rowc["c_num"] ?></span>
         <span class="info-subtitle">Date: <?php echo $rowt["date"] ?></span>
     </div>
     <div class="item-remarks">
