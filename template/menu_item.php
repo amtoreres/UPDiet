@@ -4,9 +4,9 @@
     </div>
     <div class="item-info">
         <span class="info-title"><?php echo $_POST["name"] ?></span>
-        <span class="info-subtitle"><?php echo $_POST["type"] ?></span>
-        <span class="info-subtitle"><?php echo $_POST["date"] ?></span>
-        <span class="info-subtitle"><?php echo $_POST["menu_id"] ?></span>
+        <span class="info-subtitle">Item Type: <?php echo $_POST["type"] ?></span>
+        <span class="info-subtitle">Date Added: <?php echo $_POST["date"] ?></span>
+        <span class="info-subtitle">Menu ID: <?php echo $_POST["menu_id"] ?></span>
     </div>
     <div class="item-control" id="<?php echo $_POST["menu_id"]; ?>">
         <button type="button" class="icon-button view-control" title="Changes visibility">
