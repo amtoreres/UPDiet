@@ -53,7 +53,6 @@
             </div>
         </div>
         <div class="content">
-            <?php include("dashboard_proper.php") ?>
         </div>
         <div class="sidebar">
             <?php //include("../user/overlay_proper.php"); ?>

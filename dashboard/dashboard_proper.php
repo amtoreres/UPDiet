@@ -38,6 +38,8 @@
         echo "ka.push(".json_encode($row).");";
     }
     ?>
+    
+    for(var i=0;i<5;i++) ka.push(ka[0]);
 
     //console.log(ka);
 </script>

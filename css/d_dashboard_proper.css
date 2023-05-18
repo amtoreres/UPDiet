@@ -10,7 +10,7 @@
     padding: 40px;
     border-radius: 50px;
     display: grid;
-    grid-auto-rows: max-content;
+    grid-template-rows: max-content auto;
     row-gap: 20px;
 }
 
@@ -47,8 +47,10 @@
 
 .content-store {
     display: grid;
-    grid-auto-rows: minmax(500px, auto);
+    grid-auto-rows: max-content;
     row-gap: 20px;  
+    overflow: auto;
+    scroll-behavior: smooth;
 }
 
 .store-content {

@@ -17,8 +17,8 @@
 }
 
 .item-image {
-    width: 100px;
-    height: 100px;
+    width: 180px;
+    height: 180px;
     overflow: hidden;
     border-radius: 10px;
     display: flex;
@@ -28,7 +28,7 @@
 }
 
 .item-image img {
-    width: 100px;
+    width: 180px;
 }
 
 .item-info {

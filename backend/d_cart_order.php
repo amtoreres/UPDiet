@@ -43,15 +43,16 @@
 
                 $tot += $row["quantity"] * $rowm["price"];
 
-                $q = "INSERT INTO purchase_info (t_id, order_status, food_name, store_name, price, quantity, food_img) 
-                      VALUES ($tid, 'Pending', '".$rowm["name"]."', '".$rowm2["name"]."', ".$rowm["price"].", ".$row["quantity"].", '".$rowm["img"]."');";
+                $q = "INSERT INTO purchase_info (t_id, order_status, food_name, store_name, price, quantity, food_img, store_id, menu_id) 
+                      VALUES ($tid, 'Pending', '".$rowm["name"]."', '".$rowm2["name"]."', ".$rowm["price"].", ".$row["quantity"].", '".$rowm["img"]."', ".$rowm["u_id"].", ".$mid.");";
                 $res4 = $db->query($q);
             }
         }
 
+        // arbitrary delivery fee lmao
         $tot += 15;
 
-        $q = "UPDATE purchase SET total=$tot, item_count=$itm, location='$loc' WHERE t_id=$tid;";
+        $q = "UPDATE purchase SET total=$tot, item_count=$itm, location='$loc', remarks='".$_POST["remarks"]."' WHERE t_id=$tid;";
         $res5 = $db->query($q);
 
         $q = "DELETE FROM customer_cart WHERE u_id=$uid;";
