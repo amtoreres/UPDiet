@@ -7,6 +7,8 @@
 
     error_reporting(0);
     session_start();
+    //comment
+    //comment 2
 
     //$uid = $_SESSION['admin']['u_id'];
 
