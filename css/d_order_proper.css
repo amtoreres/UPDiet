@@ -61,6 +61,31 @@
     padding-bottom: 20px;
 }
 
+.o-item-control {
+    height: 24px;
+    display: grid;
+    grid-template-columns: max-content;
+}
+
+#back-control {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    column-gap: 10px;
+    align-items: center;
+}
+
+#back-control:hover {
+    cursor: pointer;
+}
+
+.o-item-control span span {
+    padding-top: 4px;
+}
+
+.o-item-control span img {
+    width: 18px;
+}
+
 .o-item-item {
     background-color: #ffffff;
     border-radius: 20px;

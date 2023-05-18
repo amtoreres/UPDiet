@@ -15,6 +15,9 @@
 
 ?>
 <div class="o-item-content">
+    <div class="o-item-control">
+        <span id="back-control"><img src="../img/left-arrow.png"><span>Back</span></span>
+    </div>
     <div class="o-item-items">
 
     </div>

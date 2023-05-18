@@ -1,7 +1,6 @@
 <?php
     error_reporting(1);
 ?>
-
 <div class="order-item"
      id="o-<?php echo $_POST["t_id"] ?>">
     <div class="order-container">

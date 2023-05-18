@@ -166,4 +166,8 @@ $(document).ready(function(){
 
         });
     });
+
+    $(".sidebar").on("click", "#back-control", function(){
+        $("#order-trigger").trigger("click");
+    });
 });
