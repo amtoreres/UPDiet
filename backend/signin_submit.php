@@ -41,6 +41,7 @@
             }
             else {
                 $usr = mysqli_real_escape_string($db, $_POST["username"]);
+                $num = mysqli_real_escape_string($db, $_POST["c_num"]);
 
                 // create account in db
                 $q = "INSERT INTO user (email, password, u_type) VALUES ('$em', '$pw','$typ');";
@@ -53,7 +54,7 @@
                 $rows = mysqli_fetch_array($res);
                 $uid = $rows['u_id'];
                 
-                $q = "INSERT INTO customer_info (u_id, username) VALUES ('$uid', '$usr');";
+                $q = "INSERT INTO customer_info (u_id, username, c_num) VALUES ('$uid', '$usr', '$num');";
                 $res = $db->query($q);
                 
                 $_SESSION["user"]["u_id"] = $uid;

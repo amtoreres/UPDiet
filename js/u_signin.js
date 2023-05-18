@@ -20,7 +20,8 @@ $(document).ready(function(){
             "u_type": "user",
             "email": $("#email").val(),
             "password": $("#password").val(),
-            "username": $("#username").val()
+            "username": $("#username").val(),
+            "c_num": $("#c_num").val(),
         };
 
         $.post("../backend/signin_submit.php", k, function(d,s){

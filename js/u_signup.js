@@ -3,7 +3,7 @@ function is_alphanumeric(s) {
 }
 
 function verify_form() {
-    if(is_valid_usr && is_valid_em && is_valid_pw)
+    if(is_valid_usr && is_valid_em && is_valid_pw && is_valid_num)
     {
         $("#submit").attr("disabled", false);
         $("#error-msg").text("");
@@ -18,6 +18,8 @@ function verify_form() {
             $("#error-msg").text(msg);
         else if(!is_valid_pw && $("#password").val() != "") 
             $("#error-msg").text("Invalid password.");
+        else if(!is_valid_num && $("#c_num").val() != "") 
+            $("#error-msg").text("Invalid contact number.");
         else
             $("#error-msg").text("");
     }
@@ -53,8 +55,14 @@ $(document).ready(function(){
     });
 
     $(".form").on("input", "#password", function(){
-        is_valid_pw = is_alphanumeric($("#password").val()) ? true : false;
+        is_valid_pw = $("#password").val().trim() === "" ? false : true;
 
+        verify_form();
+    });
+    
+    $(".form").on("input", "#c_num", function(){
+        // allow only 11-digit numeric
+        is_valid_num = $("#c_num").val().match(/^$|(09[0-9]{9})+/) ? true : false;
         verify_form();
     });
 });
@@ -62,5 +70,6 @@ $(document).ready(function(){
 var is_valid_usr = false;
 var is_valid_em = false;
 var is_valid_pw = false;
+var is_valid_num = false;
 
 var msg = "Invalid email.";

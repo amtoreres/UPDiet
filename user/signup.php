@@ -35,7 +35,13 @@
             <div class="signup-field">
                 <input  id="password" type="password" placeholder="Password" maxlength="16">
                 <span class="tooltip-q">?
-                    <span class="tooltip">Max of 16 alphanumeric characters.</span>
+                    <span class="tooltip">Max of 16 characters.</span>
+                </span>
+            </div>
+            <div class="signup-field">
+                <input  id="c_num" placeholder="Contact Number" maxlength="11">
+                <span class="tooltip-q">?
+                    <span class="tooltip">11-digit number.</span>
                 </span>
             </div>
         </div>
