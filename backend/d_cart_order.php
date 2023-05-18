@@ -1,6 +1,7 @@
 <?php
     class resp {
         public $op_status;
+        public $t_id;
     }
 
     include("../conn/connect.php");
@@ -27,7 +28,7 @@
         $tot = 0;
         $itm = mysqli_num_rows($resc);
 
-        echo mysqli_num_rows($resc);
+        //echo mysqli_num_rows($resc);
 
         if(mysqli_num_rows($resc) > 0) {
             while($row = mysqli_fetch_assoc($resc)) {
@@ -57,6 +58,11 @@
 
         $q = "DELETE FROM customer_cart WHERE u_id=$uid;";
         $res6 = $db->query($q);
+
+        $r = new resp();
+        $r->t_id = $tid;
+
+        echo json_encode($r);
     }
 
 ?>

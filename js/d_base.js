@@ -147,8 +147,22 @@ $(document).ready(function(){
         };
 
         $.post("../backend/d_cart_order.php", k, function(d,s){
-            $(".sidebar").load("cart_success.php");
-            //console.log(d);
+            var r = JSON.parse(d);
+            recent_t_id = `t-${r["t_id"]}`;
+
+            $(".sidebar").load("cart_success.php", function(){
+
+            });
+        });
+    });
+
+    $(".sidebar").on("click", "#transaction-view", function(){
+        var k = {
+            "t_id": recent_t_id
+        };
+
+        $(".sidebar").load("order_items.php", k, function(d,s) {
+
         });
     });
 
@@ -171,3 +185,5 @@ $(document).ready(function(){
         $("#order-trigger").trigger("click");
     });
 });
+
+var recent_t_id;

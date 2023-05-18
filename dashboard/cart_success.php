@@ -8,7 +8,7 @@
         </div>
     </div>
     <div class="binary-controls">
-        <span class="binary-button binary-button-submit" id="transaction-view">View Transaction</span>
-        <span class="binary-button binary-button-cancel" id="transaction-close">Close</span>
+        <button class="binary-button binary-button-submit" id="transaction-view">View Transaction</button>
+        <button class="binary-button binary-button-cancel" id="transaction-close">Close</button>
     </div>
 </div>

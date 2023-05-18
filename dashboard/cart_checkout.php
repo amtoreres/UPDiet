@@ -57,8 +57,8 @@
         </div>
     </div>
     <div class="binary-controls">
-        <span class="binary-button binary-button-submit" id="checkout-submit">Place Order</span>
-        <span class="binary-button binary-button-cancel" id="checkout-cancel">Cancel</span>
+        <button class="binary-button binary-button-submit" id="checkout-submit">Place Order</button>
+        <button class="binary-button binary-button-cancel" id="checkout-cancel">Cancel</button>
     </div>
 </div>
 <script>
