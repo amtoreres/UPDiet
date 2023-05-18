@@ -1,6 +1,6 @@
 $(document).ready(function(){
     //console.log($(".cart-items").height());
-    //$(".cart-items").css("max-height", `${Math.round($(".cart-items").height())}px`);
+    $(".o-item-items").css("max-height", `${Math.round($(".o-item-items").height())}px`);
 
     //console.log(ko.length);
 

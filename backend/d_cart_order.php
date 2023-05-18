@@ -24,8 +24,6 @@
 
         $q = "SELECT * FROM customer_cart WHERE u_id=$uid;";
         $resc = $db->query($q);
-
-        $tot = 0;
         $itm = mysqli_num_rows($resc);
 
         //echo mysqli_num_rows($resc);
@@ -42,18 +40,17 @@
                 $resm = $db->query($q);
                 $rowm2 = mysqli_fetch_array($resm);
 
-                $tot += $row["quantity"] * $rowm["price"];
-
                 $q = "INSERT INTO purchase_info (t_id, order_status, food_name, store_name, price, quantity, food_img, store_id, menu_id) 
                       VALUES ($tid, 'Pending', '".$rowm["name"]."', '".$rowm2["name"]."', ".$rowm["price"].", ".$row["quantity"].", '".$rowm["img"]."', ".$rowm["u_id"].", ".$mid.");";
                 $res4 = $db->query($q);
             }
         }
 
-        // arbitrary delivery fee lmao
-        $tot += 15;
+        $q = "SELECT COUNT(DISTINCT b.u_id) AS store_count FROM customer_cart AS a, store_menu AS b WHERE a.menu_id=b.menu_id;";
+        $resd = $db->query($q);
+        $rowd = mysqli_fetch_array($resd);
 
-        $q = "UPDATE purchase SET total=$tot, item_count=$itm, location='$loc', remarks='".$_POST["remarks"]."' WHERE t_id=$tid;";
+        $q = "UPDATE purchase SET item_count=$itm, location='$loc', remarks='".$_POST["remarks"]."' WHERE t_id=$tid;";
         $res5 = $db->query($q);
 
         $q = "DELETE FROM customer_cart WHERE u_id=$uid;";

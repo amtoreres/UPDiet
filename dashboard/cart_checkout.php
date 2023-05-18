@@ -21,7 +21,14 @@
         }
     }
 
+    // base delivery fee
     $df = 15;
+
+    $q = "SELECT COUNT(DISTINCT b.u_id) AS store_count FROM customer_cart AS a, store_menu AS b WHERE a.menu_id=b.menu_id;";
+    $resd = $db->query($q);
+    $rowd = mysqli_fetch_array($resd);
+
+    $df *= $rowd["store_count"];
 
 ?>
 <div class="checkout-content">
