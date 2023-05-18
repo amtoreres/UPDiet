@@ -2,6 +2,7 @@
     padding: 20px;
     display: grid;
     grid-template-rows: max-content auto;
+    grid-template-columns: auto;
     row-gap: 20px;
 }
 
@@ -54,6 +55,7 @@
 
 .o-item-content {
     display: grid;
+    padding: 20px;
     grid-template-rows: max-content auto repeat(2, max-content);
 }
 
@@ -154,14 +156,12 @@
 
 .o-form-spacer {
     grid-row: 3;
-    grid-column: 1 / 3;
     border-top: 5px dotted #000000;
     margin: 20px 0px;
     grid-row: 3;
 }
 
 .o-item-fees {
-    margin-bottom: 20px;
     grid-row: 4;
     display: grid;
     grid-template-columns: auto max-content;

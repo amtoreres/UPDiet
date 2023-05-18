@@ -157,6 +157,9 @@ $(document).ready(function(){
     });
 
     $(".sidebar").on("click", "#transaction-view", function(){
+        $("button").removeClass("nav-active");
+        $("#order-trigger").addClass("nav-active");
+        
         var k = {
             "t_id": recent_t_id
         };
@@ -183,6 +186,23 @@ $(document).ready(function(){
 
     $(".sidebar").on("click", "#back-control", function(){
         $("#order-trigger").trigger("click");
+    });
+
+    $(".sidebar").on("click", ".preview-redirect", function(){
+        $("#order-trigger").trigger("click");
+    });
+
+    $(".sidebar").on("click", ".preview-item", function(){
+        $("button").removeClass("nav-active");
+        $("#order-trigger").addClass("nav-active");
+
+        var k = {
+            "t_id": $(this).attr("id")
+        };
+
+        $(".sidebar").load("order_items.php", k, function(d,s) {
+
+        });
     });
 });
 

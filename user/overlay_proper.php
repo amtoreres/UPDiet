@@ -41,7 +41,7 @@
             </div>
         </div>
     </div>
-    <div class="order-content">
+    <div class="preview-container">
         <?php
             include("overlay_order.php");
         ?>
