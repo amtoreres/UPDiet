@@ -72,7 +72,7 @@ $(document).ready(function(){
     });
 
     $(".form-proper").on("input", "#password", function(){
-        is_valid_pw = is_alphanumeric($("#password").val()) ? true : false;
+        is_valid_pw = $("#password").val().trim() === "" ? false : true;
 
         verify_form();
     });

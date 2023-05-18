@@ -42,7 +42,7 @@ $(document).ready(function(){
     
     // check if input is valid new pw
     $(".sidebar").on("input", "#pw-new", function(){
-        is_valid_new_pw = is_alphanumeric($("#pw-new").val()) ? true : false;
+        is_valid_new_pw = $("#pw-new").val().trim() === "" ? false : true;
         verify_form();
     });
 });
