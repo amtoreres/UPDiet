@@ -10,7 +10,7 @@ function update_controls(id, status) {
 }
 
 function order_listener() {
-    $.get("../backend/a_order_listener.php", function(d,s){
+    $.post("../backend/a_order_listener.php", {"u_id": db_uid}, function(d,s){
         const r = JSON.parse(d);
         //console.log(r["latest"]);
         if(r["latest"] != -1) {
@@ -30,7 +30,7 @@ $(document).ready(function(){
     
     $(".content").on("click", ".cancel-control", function(){
         var tiid = $(this).parent().attr("id");
-        var ord = "Canceled";
+        var ord = "Cancelled";
 
         var k = {
             "ti_id": tiid,
