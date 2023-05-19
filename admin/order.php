@@ -40,6 +40,6 @@
         <script>
             var db_uid = <?php echo $_SESSION["admin"]["u_id"]; ?>;
         </script>
-        <script src="../js/a_profile.js"></script>
+        <script src="../js/a_order.js"></script>
     </body>
 </html>

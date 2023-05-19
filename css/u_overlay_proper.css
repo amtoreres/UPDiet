@@ -3,6 +3,7 @@
     display: grid;
     grid-auto-rows: max-content;
     row-gap: 10px;
+    padding: 10px;
 }
 
 .profile-content {

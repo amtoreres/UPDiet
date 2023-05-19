@@ -2,6 +2,7 @@
     padding: 20px;
     display: grid;
     grid-template-rows: max-content auto;
+    grid-template-columns: auto;
     row-gap: 20px;
 }
 
@@ -52,13 +53,46 @@
     font-weight: bold;
 }
 
+.o-item-content {
+    display: grid;
+    padding: 20px;
+    grid-template-rows: max-content auto repeat(2, max-content);
+}
+
 .o-item-items {
+    grid-row: 2;
     display: grid;
     grid-auto-rows: max-content;
     row-gap: 10px;
     overflow: auto;
     scroll-behavior: smooth;
     padding-bottom: 20px;
+}
+
+.o-item-control {
+    height: 24px;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: max-content;
+}
+
+#back-control {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    column-gap: 10px;
+    align-items: center;
+}
+
+#back-control:hover {
+    cursor: pointer;
+}
+
+.o-item-control span span {
+    padding-top: 4px;
+}
+
+.o-item-control span img {
+    width: 18px;
 }
 
 .o-item-item {
@@ -110,4 +144,28 @@
     align-self: flex-end;
     display: flex;
     align-items: end;
+}
+
+.o-form-label {
+    font-weight: bold;
+}
+
+.o-form-value {
+    text-align: right;
+}
+
+.o-form-spacer {
+    grid-row: 3;
+    border-top: 5px dotted #000000;
+    margin: 20px 0px;
+    grid-row: 3;
+}
+
+.o-item-fees {
+    grid-row: 4;
+    display: grid;
+    grid-template-columns: auto max-content;
+    background-color: #ffffff;
+    overflow: auto;
+    scroll-behavior: smooth;
 }

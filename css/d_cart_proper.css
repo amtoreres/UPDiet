@@ -116,18 +116,25 @@
 
 .binary-button {
     text-align: center;
+    border: none;
     border-radius: 20px;
     padding: 10px 0px;
     background-color: #ffffff;
 	filter: drop-shadow(0px 5px 3px rgba(0, 0, 0, 0.2));
+    font-family: "Josefin Sans";
+    font-size: inherit;
 }
 
-.binary-button:hover {
+.binary-button:disabled {
+    opacity: 0.6;
+}
+
+.binary-button:enabled:hover {
     background-color: #b0b0b0;
     cursor: pointer;
 }
 
-.binary-button-submit:hover {
+.binary-button-submit:enabled:hover {
     background-color: #b0b0b0;
     cursor: pointer;
 }

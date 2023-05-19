@@ -20,7 +20,7 @@
             <div class="form-container">
                 <div class="form-header">
                     <span class="form-label">Password</span>
-                    <span class="tooltip-header">?<span>Max of 16 alphanumeric characters.</span>
+                    <span class="tooltip-header">?<span>Max of 16 characters.</span>
                 </div>
                 <div class="form-input">
                     <input id="pw-old" type="password" maxlength="16" placeholder="Current Password"/>

@@ -36,7 +36,7 @@ $(document).ready(function(){
     });
 
     $(".form-content").on("input", "#price", function(){
-        is_valid_prc = $("#price").val().match(/^([0-9]*[.])?[0-9]{1,2}$/) ? true : false;
+        is_valid_prc = $("#price").val().match(/^[0-9]+[.]?[0-9]{1,2}$/) ? true : false;
 
         verify_form();
     });

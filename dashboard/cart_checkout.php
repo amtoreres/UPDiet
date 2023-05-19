@@ -21,7 +21,14 @@
         }
     }
 
+    // base delivery fee
     $df = 15;
+
+    $q = "SELECT COUNT(DISTINCT b.u_id) AS store_count FROM customer_cart AS a, store_menu AS b WHERE a.menu_id=b.menu_id;";
+    $resd = $db->query($q);
+    $rowd = mysqli_fetch_array($resd);
+
+    $df *= $rowd["store_count"];
 
 ?>
 <div class="checkout-content">
@@ -57,8 +64,8 @@
         </div>
     </div>
     <div class="binary-controls">
-        <span class="binary-button binary-button-submit" id="checkout-submit">Place Order</span>
-        <span class="binary-button binary-button-cancel" id="checkout-cancel">Cancel</span>
+        <button class="binary-button binary-button-submit" id="checkout-submit">Place Order</button>
+        <button class="binary-button binary-button-cancel" id="checkout-cancel">Cancel</button>
     </div>
 </div>
 <script>

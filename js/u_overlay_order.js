@@ -1,20 +1,20 @@
 $(document).ready(function(){
     //console.log($(".cart-items").height());
-    $(".o-item-items").css("max-height", `${Math.round($(".o-item-items").height())}px`);
+    //$(".cart-items").css("max-height", `${Math.round($(".cart-items").height())}px`);
 
     //console.log(ko.length);
 
-    if(koi.length > 0) {   
+    if(kop.length > 0) {   
         // ajax with async to prevent break in order
-        koi.forEach(function(i){    
+        kop.forEach(function(i){    
             //console.log(i); 
             $.ajax({
                 type: "POST",
-                url: "../template/purchase_item.php",
+                url: "../template/preview_item.php",
                 data: i,
                 async: false,
                 success: function(d) {
-                    $(".o-item-items").append(d);
+                    $(".preview-list").append(d);
                     //console.log(d);
                 },
                 error: function(d) {
@@ -29,6 +29,7 @@ $(document).ready(function(){
         });
     }
     else {
-        //$(".content-cart").text("No results.");
+        $(".preview-list").append("No pending orders.");
+        $(".preview-control").hide();
     }
 });
