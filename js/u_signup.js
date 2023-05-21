@@ -28,7 +28,7 @@ function verify_form() {
 $(document).ready(function(){
     $(".form").off("input");
     $(".form").on("input", "#username", function(){
-        is_valid_usr = $("#username").val().match(/^[^ ]+.[^ ]+$/) ? true : false;
+        is_valid_usr = $("#username").val().match(/^(?!\s).+(?<!\s)$/) ? true : false;
 
         verify_form();
     });
