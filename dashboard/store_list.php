@@ -12,7 +12,7 @@
         $uid = $_POST["u_id"];
         $typ = $_POST["type"];
 
-        $q = "SELECT * FROM store_menu WHERE u_id=$uid && type='$typ';";
+        $q = "SELECT * FROM store_menu WHERE u_id=$uid && type='$typ' && is_published=1;";
         $res = $db->query($q);
     }
 
