@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 18, 2023 at 10:51 AM
+-- Generation Time: May 20, 2023 at 09:50 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -127,8 +127,9 @@ CREATE TABLE `store_info` (
 --
 
 INSERT INTO `store_info` (`u_id`, `location`, `is_published`, `join_date`, `prof_pic`, `prof_cover`, `name`, `c_num`) VALUES
-(2, 'Somewhere down the road.', 1, '2023-04-04 17:44:21', 'uploads/img/store/prof_pic/2', 'uploads/img/store/prof_cover/2', 'Manang Betch', '09123456789'),
-(18, 'CUB', 1, '2023-05-18 07:00:31', 'uploads/img/store/prof_pic/18', 'uploads/img/store/prof_cover/18', 'Store 2', '09999999999');
+(2, 'Bulwagang Lean Alejandrino (CUB)', 1, '2023-04-04 17:44:21', 'uploads/img/store/prof_pic/2', 'uploads/img/store/prof_cover/2', 'Manang Betch', '09123456789'),
+(18, 'CUB', 1, '2023-05-18 07:00:31', 'uploads/img/store/prof_pic/18', 'uploads/img/store/prof_cover/18', 'Store 2', '09999999999'),
+(19, 'Hollywood St., Mat-y, Miagao', 1, '2023-05-20 06:46:25', 'uploads/img/store/prof_pic/19', 'uploads/img/store/prof_cover/19', 'Melden\'s', '09214512312');
 
 -- --------------------------------------------------------
 
@@ -157,7 +158,46 @@ INSERT INTO `store_menu` (`menu_id`, `u_id`, `name`, `type`, `date`, `is_publish
 (29, 2, 'Chicken Adobo', 'Main Course', '2023-04-28 04:55:33', 1, '45.00', 'uploads/img/store/menu/2/29'),
 (31, 2, 'Leche Flan', 'Dessert', '2023-05-02 03:36:12', 1, '45.00', 'uploads/img/store/menu/2/31'),
 (32, 2, 'Coke', 'Beverage', '2023-05-02 03:38:12', 1, '30.00', 'uploads/img/store/menu/2/32'),
-(39, 18, 'Rice', 'Add-on', '2023-05-18 07:01:12', 1, '15.00', 'uploads/img/store/menu/18/39');
+(39, 18, 'Rice', 'Add-on', '2023-05-18 07:01:12', 1, '15.00', 'uploads/img/store/menu/18/39'),
+(40, 2, 'Lechon Kawali', 'Main Course', '2023-05-20 05:59:53', 1, '60.00', 'uploads/img/store/menu/2/40'),
+(41, 2, 'Karekare', 'Main Course', '2023-05-20 06:00:08', 1, '50.00', 'uploads/img/store/menu/2/41'),
+(42, 2, 'Sinigang', 'Main Course', '2023-05-20 06:00:23', 1, '60.00', 'uploads/img/store/menu/2/42'),
+(43, 2, 'Porkchop', 'Main Course', '2023-05-20 06:00:38', 1, '45.00', 'uploads/img/store/menu/2/43'),
+(44, 2, 'Caldereta', 'Main Course', '2023-05-20 06:00:55', 1, '50.00', 'uploads/img/store/menu/2/44'),
+(45, 2, 'Mechado', 'Main Course', '2023-05-20 06:01:08', 1, '50.00', 'uploads/img/store/menu/2/45'),
+(46, 2, 'Pinakbet', 'Main Course', '2023-05-20 06:01:28', 1, '40.00', 'uploads/img/store/menu/2/46'),
+(47, 2, 'Ensaladang Talaong', 'Appetizer', '2023-05-20 06:02:15', 1, '40.00', 'uploads/img/store/menu/2/47'),
+(48, 2, 'Lumpia', 'Appetizer', '2023-05-20 06:02:37', 1, '10.00', 'uploads/img/store/menu/2/48'),
+(49, 2, 'Chicken Inasal', 'Appetizer', '2023-05-20 06:02:59', 1, '12.00', 'uploads/img/store/menu/2/49'),
+(50, 2, 'Pork Inasal', 'Appetizer', '2023-05-20 06:03:21', 1, '12.00', 'uploads/img/store/menu/2/50'),
+(51, 2, 'Ube Halaya', 'Dessert', '2023-05-20 06:04:48', 1, '20.00', 'uploads/img/store/menu/2/51'),
+(52, 2, 'Halohalo', 'Dessert', '2023-05-20 06:05:14', 1, '60.00', 'uploads/img/store/menu/2/52'),
+(53, 2, 'Cassava Cake', 'Dessert', '2023-05-20 06:05:32', 1, '15.00', 'uploads/img/store/menu/2/53'),
+(54, 2, 'Royal', 'Beverage', '2023-05-20 06:05:52', 1, '20.00', 'uploads/img/store/menu/2/54'),
+(55, 2, 'Mountain Dew', 'Beverage', '2023-05-20 06:06:11', 1, '20.00', 'uploads/img/store/menu/2/55'),
+(56, 2, 'Orange Juice', 'Beverage', '2023-05-20 06:08:15', 1, '20.00', 'uploads/img/store/menu/2/56'),
+(57, 2, 'Iced Tea', 'Beverage', '2023-05-20 06:08:36', 1, '26.00', 'uploads/img/store/menu/2/57'),
+(58, 2, 'Lemonade', 'Beverage', '2023-05-20 06:09:13', 1, '45.00', 'uploads/img/store/menu/2/58'),
+(59, 2, 'Bottled Water', 'Beverage', '2023-05-20 06:09:33', 1, '20.00', 'uploads/img/store/menu/2/59'),
+(60, 2, 'Fried Rice', 'Add-on', '2023-05-20 06:11:03', 1, '12.00', 'uploads/img/store/menu/2/60'),
+(61, 2, 'Steamed Siomai', 'Add-on', '2023-05-20 06:11:20', 1, '10.00', 'uploads/img/store/menu/2/61'),
+(62, 2, 'Fried Siomai', 'Add-on', '2023-05-20 06:11:53', 1, '10.00', 'uploads/img/store/menu/2/62'),
+(63, 2, 'Salted Egg', 'Add-on', '2023-05-20 06:12:10', 1, '25.00', 'uploads/img/store/menu/2/63'),
+(64, 19, 'Rice', 'Add-on', '2023-05-20 06:48:08', 1, '10.00', 'uploads/img/store/menu/19/64'),
+(65, 19, 'Fried Fish', 'Main Course', '2023-05-20 06:49:40', 1, '40.00', 'uploads/img/store/menu/19/65'),
+(66, 19, 'Porkchop', 'Main Course', '2023-05-20 06:50:08', 1, '40.00', 'uploads/img/store/menu/19/66'),
+(67, 19, 'Chicken Bilog', 'Main Course', '2023-05-20 06:51:58', 1, '15.00', 'uploads/img/store/menu/19/67'),
+(68, 19, 'Tortang Corned Beef', 'Main Course', '2023-05-20 06:54:26', 1, '20.00', 'uploads/img/store/menu/19/68'),
+(69, 19, 'Original PC', 'Appetizer', '2023-05-20 06:56:59', 1, '15.00', 'uploads/img/store/menu/19/69'),
+(70, 19, 'Sweet and Spicy PC', 'Appetizer', '2023-05-20 06:57:18', 1, '15.00', 'uploads/img/store/menu/19/70'),
+(71, 19, 'Chillimansi PC', 'Appetizer', '2023-05-20 06:57:36', 1, '15.00', 'uploads/img/store/menu/19/71'),
+(72, 19, 'Extra Hot PC', 'Appetizer', '2023-05-20 06:58:00', 1, '15.00', 'uploads/img/store/menu/19/72'),
+(73, 19, 'Melon Shake', 'Beverage', '2023-05-20 07:03:40', 1, '55.00', 'uploads/img/store/menu/19/73'),
+(74, 19, 'Strawberry Shake', 'Beverage', '2023-05-20 07:04:01', 1, '55.00', 'uploads/img/store/menu/19/74'),
+(75, 19, 'Cookiesn\'Cream Shake', 'Beverage', '2023-05-20 07:04:44', 1, '60.00', 'uploads/img/store/menu/19/75'),
+(76, 19, 'Beng Beng', 'Dessert', '2023-05-20 07:44:23', 1, '10.00', 'uploads/img/store/menu/19/76'),
+(77, 19, 'Cloud 9', 'Dessert', '2023-05-20 07:44:44', 1, '10.00', 'uploads/img/store/menu/19/77'),
+(78, 19, 'Lumpia', 'Add-on', '2023-05-20 07:45:44', 1, '20.00', 'uploads/img/store/menu/19/78');
 
 -- --------------------------------------------------------
 
@@ -180,7 +220,8 @@ INSERT INTO `user` (`u_id`, `email`, `password`, `u_type`) VALUES
 (1, 'kmenorio@up.edu.ph', '81dc9bdb52d04dc20036dbd8313ed055', 'user'),
 (2, 'manangbetch@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 'admin'),
 (17, 'jdoe@up.edu.ph', '202cb962ac59075b964b07152d234b70', 'user'),
-(18, 'a@up.edu.ph', '202cb962ac59075b964b07152d234b70', 'admin');
+(18, 'a@up.edu.ph', '202cb962ac59075b964b07152d234b70', 'admin'),
+(19, 'meldens@gmail.com', 'e2fc714c4727ee9395f324cd2e7f331f', 'admin');
 
 --
 -- Indexes for dumped tables
@@ -243,13 +284,13 @@ ALTER TABLE `purchase_info`
 -- AUTO_INCREMENT for table `store_menu`
 --
 ALTER TABLE `store_menu`
-  MODIFY `menu_id` int(222) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `menu_id` int(222) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `u_id` int(222) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `u_id` int(222) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
