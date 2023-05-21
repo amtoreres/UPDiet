@@ -8,12 +8,13 @@
     error_reporting(1);
     session_start();
 
+    $uid = $_SESSION["user"]["u_id"];
     $tid = explode("-", $_POST["t_id"])[1];
 
     $q = "SELECT * FROM purchase_info WHERE t_id=$tid;";
     $res = $db->query($q);
 
-    $q = "SELECT COUNT(DISTINCT b.u_id) AS store_count FROM purchase_info AS a, store_menu AS b WHERE a.menu_id=b.menu_id && a.order_status!='Cancelled';";
+    $q = "SELECT COUNT(DISTINCT b.u_id) AS store_count FROM purchase_info AS a, store_menu AS b WHERE a.t_id=$tid && a.menu_id=b.menu_id && a.order_status!='Cancelled';";
     $resd = $db->query($q);
     $rowd = mysqli_fetch_array($resd);
 
