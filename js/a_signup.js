@@ -84,7 +84,7 @@ $(document).ready(function(){
     });
 
     $(".form-proper").on("input", "#location", function(){
-        is_valid_loc = $("#is_valid_loc").val() != "";
+        is_valid_loc = $("#is_valid_loc").val() == "" ? false: true;
 
         verify_form();
     });
