@@ -5,19 +5,21 @@
 
     include("../conn/connect.php");
 
-    error_reporting(0);
+    error_reporting(1);
     session_start();
-
-    $r = new resp();
 
     if(isset($_POST["ti_id"])) {
         $tiid = $_POST["ti_id"];
         $ord = $_POST["order_status"];
 
-        $q = "UPDATE purchase_info SET order_status='$ord' WHERE ti_id=$tiid;";
+        $q = "UPDATE purchase_info SET order_status='$ord'";
+
+        if(strcmp($ord, "Cancelled") || strcmp($ord, "On Delivery")) {
+            $q .= ", is_notify=1";
+        }
+        
+        $q .= " WHERE ti_id=$tiid;";
         $res = $db->query($q);
     }
-
-    echo json_encode($r);
 
 ?>

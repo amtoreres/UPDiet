@@ -31,6 +31,6 @@
         echo "kop.push(".json_encode($row).");";
     }
     ?>
-    console.log(kop);
+    //console.log(kop);
 </script>
 <script src="../js/u_overlay_order.js"></script>
