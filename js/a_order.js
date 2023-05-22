@@ -52,6 +52,7 @@ $(document).ready(function(){
         };
 
         $.post("../backend/a_order_update.php", k, function(d,s){
+            //console.log(d);
             update_controls(tiid, ord);
         });
     });

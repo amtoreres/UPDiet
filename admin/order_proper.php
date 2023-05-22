@@ -24,6 +24,6 @@
         echo "kao.push(".json_encode($row).");";
     }
     ?>
-    console.log(kao);
+    //console.log(kao);
 </script>
 <script type="module" src="../js/a_order_proper.js"></script>

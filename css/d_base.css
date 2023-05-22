@@ -36,10 +36,6 @@ input[type=file] {
 
 */
 
-.nav {
-	/*filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.2));*/
-}
-
 .nav-container {
     height: 100%;
     display: grid;
@@ -94,6 +90,21 @@ input[type=file] {
 
 .nav-active {
     border-right: 8px solid #fdf0ac;
+}
+
+.nav-notif-order {
+    position: absolute;
+    margin-top: -24px;
+    margin-right: -24px;
+    background-color: #fdf0ac;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
 }
 
 .logout {
@@ -180,7 +191,129 @@ input[type=file] {
     position: fixed;
     bottom: 0;
     right: 0;
-	filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.2));
+    background-color: #F3E495;
+    margin-bottom: 40px;
+    width: 450px;
+    padding: 20px;
+    border-radius: 20px;
+	filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.2));
+    display: grid;
+    grid-template-rows: max-content auto;
+    row-gap: 20px;
+    display: none;
+}
+
+.notif-header {
+    display: grid;
+}
+
+.notif-title {
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: repeat(2, max-content) auto;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.notif-title-img {
+    width: 18px;
+    height: 18px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.notif-title-text {
+    padding-top: 3px;
+}
+
+.notif-title-img img {
+    width: 18px;
+}
+
+.notif-controls {
+    grid-column: 3;
+    display: flex;
+    align-items: center;
+    justify-self: end;
+    justify-content: end;
+}
+
+.notif-control {
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    background: transparent;
+    border: none;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notif-control:hover {
+    background-color: #B0B0B0;
+}
+
+.notif-control img {
+    width: 12px;
+}
+
+.notif-subheader-text {
+    font-style: italic;
+    font-weight: 300;
+}
+
+.notif-content {
+    display: grid;
+    grid-template-columns: auto max-content;
+    column-gap: 30px;
+}
+
+.notif-c-header {
+    display: grid;
+    grid-auto-rows: max-content;
+    row-gap: 10px;
+}
+
+.notif-c-h-detail {
+    display: grid;
+    grid-auto-rows: max-content;
+    background-color: #fdf0ac;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.notif-d-food {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    column-gap: 5px;
+}
+
+.notif-d-f-name {
+    font-weight: bold;
+}
+
+.notif-d-italic {
+    font-weight: 300;
+    font-style: italic;
+}
+
+.notif-redirect {
+    justify-self: end;
+    display: flex;
+    justify-content: end;
+    align-items: start;
+}
+
+.notif-r-control {
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.notif-r-control:hover {
+    cursor: pointer;
+    background-color: #B0B0B0;
 }
 
 /*
