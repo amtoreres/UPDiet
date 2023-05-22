@@ -22,7 +22,7 @@ function order_listener() {
 }
 
 $(document).ready(function(){
-    setInterval(order_listener, 500);
+    setInterval(order_listener, 250);
 
     $(".content").on("click", ".reload-trigger", function(){
         window.location.reload(true);
