@@ -12,7 +12,9 @@
     // check if email is posted
     if(isset($_POST["name"]))
     {                    
-        $q = "SELECT * from store_info where name='".$_POST["name"]."';";
+        $n = mysqli_real_escape_string($db, $_POST["name"]);
+
+        $q = "SELECT * from store_info where name='$n';";
         $res = $db->query($q);
         $rows = mysqli_fetch_array($res);
     

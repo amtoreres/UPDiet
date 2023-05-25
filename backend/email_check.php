@@ -12,9 +12,10 @@
     // check if email is posted
     if(isset($_POST["email"]))
     {                    
+        $em = mysqli_escape_string($db, $_POST["email"]);
         $typ = $_POST["u_type"];
 
-        $q = "SELECT * from user where email='".$_POST["email"]."' && u_type='$typ';";
+        $q = "SELECT * from user where email='$em' && u_type='$typ';";
         $res = $db -> query($q);
         $rows = mysqli_fetch_array($res);
     

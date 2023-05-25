@@ -16,7 +16,8 @@
     $resc = $db->query($q);
     $rowc = mysqli_fetch_array($resc);
 ?>
-<div class="item-content">
+<div class="item-content i-<?php echo $_POST["t_id"]; ?>" 
+     data-group-id="<?php echo $_POST["t_id"]; ?>">
     <div class="item-image">
         <img src="../<?php echo $_POST["food_img"]."?".filemtime("../".$_POST["food_img"]); ?>" >
     </div>
