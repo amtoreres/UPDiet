@@ -12,15 +12,23 @@
         $tiid = $_POST["ti_id"];
         $ord = $_POST["order_status"];
 
-        $q = "UPDATE purchase_info SET order_status='$ord'";
+        $q = "SELECT order_status FROM purchase_info WHERE ti_id=$tiid;";
+        $resq = $db->query($q);
+        $rowq = mysqli_fetch_array($resq);
 
-        if($ord == "Cancelled" || $ord == "On Delivery") {
-            $q .= ", is_notify=1";
+        if($rowq["order_status"] == "Pending" || $ord == "Completed") {
+            $q = "UPDATE purchase_info SET order_status='$ord'";
+    
+            if($ord == "Cancelled" || $ord == "On Delivery") {
+                $q .= ", is_notify=1";
+            }
+            
+            $q .= " WHERE ti_id=$tiid;";
+            $res = $db->query($q);
+
+            echo json_encode(array("is_update"=>true));
         }
-        
-        
-        $q .= " WHERE ti_id=$tiid;";
-        $res = $db->query($q);
+        else  echo json_encode(array("is_update"=>false));
     }
 
 ?>

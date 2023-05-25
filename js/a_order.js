@@ -57,7 +57,11 @@ $(document).ready(function(){
             };
 
             $.post("../backend/a_order_update.php", k, function(d,s){
-                update_controls(tiid, ord);
+                var r = JSON.parse(d);
+                if(r["is_update"]) {
+                    update_controls(tiid, ord);
+                }
+                
                 $(`.i-${iid}`).css("background-color", "transparent");
             });
         });
@@ -94,7 +98,12 @@ $(document).ready(function(){
             };
 
             $.post("../backend/a_order_update.php", k, function(d,s){
-                update_controls(tiid, ord);
+                var r = JSON.parse(d);
+                if(r["is_update"]) {
+                    update_controls(tiid, ord);
+                }
+                
+                $(`.i-${iid}`).css("background-color", "transparent");
             });
         });
     });
