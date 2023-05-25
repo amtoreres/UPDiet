@@ -56,6 +56,9 @@
 
         $q = "DELETE FROM store_menu WHERE u_id=$uid;";
         $res = $db->query($q);
+
+        $q = "UPDATE purchase_info AS a, store_info AS b SET a.order_status='Cancelled' WHERE b.u_id=$uid && a.store_name=b.name && a.order_status!='Completed';";
+        $res = $db->query($q);
     }
 
 ?>

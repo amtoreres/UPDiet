@@ -10,7 +10,7 @@
 
     $uid = $_SESSION["user"]["u_id"];
 
-    $q = "SELECT b.* FROM purchase AS a, purchase_info AS b WHERE a.u_id=$uid && a.t_id=b.t_id && b.order_status='Pending' ORDER BY ti_id DESC;";
+    $q = "SELECT b.* FROM purchase AS a, purchase_info AS b WHERE a.u_id=$uid && a.t_id=b.t_id && b.order_status='Pending' ORDER BY ti_id DESC LIMIT 5;";
     $res = $db->query($q);
 
 ?>

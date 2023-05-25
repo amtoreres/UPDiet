@@ -42,6 +42,27 @@ $(document).ready(function(){
         });
     });
     
+    $(".content").on("click", ".cancel-a-control", function(){
+        var iid = $(this).closest(".item-content").attr("data-group-id");
+
+        $(`.i-${iid}`).each(function(){
+            //console.log($(this).find(".item-control").attr("id"));
+            var tiid = $(this).find(".item-control").attr("id");
+            
+            var ord = "Cancelled";
+
+            var k = {
+                "ti_id": tiid,
+                "order_status": ord
+            };
+
+            $.post("../backend/a_order_update.php", k, function(d,s){
+                update_controls(tiid, ord);
+                $(`.i-${iid}`).css("background-color", "transparent");
+            });
+        });
+    });
+    
     $(".content").on("click", ".deliver-control", function(){
         var tiid = $(this).parent().attr("id");
         var ord = "On Delivery";
@@ -54,6 +75,27 @@ $(document).ready(function(){
         $.post("../backend/a_order_update.php", k, function(d,s){
             //console.log(d);
             update_controls(tiid, ord);
+        });
+    });
+    
+    $(".content").on("click", ".deliver-a-control", function(){
+        var iid = $(this).closest(".item-content").attr("data-group-id");
+        $(`.i-${iid}`).css("background-color", "transparent");
+
+        $(`.i-${iid}`).each(function(){
+            //console.log($(this).find(".item-control").attr("id"));
+            var tiid = $(this).find(".item-control").attr("id");
+            
+            var ord = "On Delivery";
+
+            var k = {
+                "ti_id": tiid,
+                "order_status": ord
+            };
+
+            $.post("../backend/a_order_update.php", k, function(d,s){
+                update_controls(tiid, ord);
+            });
         });
     });
     
@@ -70,4 +112,17 @@ $(document).ready(function(){
             update_controls(tiid, ord);
         });
     });
+
+    $(".content").on("mouseenter", ".group-control", function(){
+        var iid = $(this).closest(".item-content").attr("data-group-id");
+        //console.log(iid);
+        $(`.i-${iid}`).css("background-color", "#F1F1F1");
+    });
+
+    $(".content").on("mouseleave", ".group-control", function(){
+        var iid = $(this).closest(".item-content").attr("data-group-id");
+        //console.log(iid);
+        $(`.i-${iid}`).css("background-color", "transparent");
+    });
 });
+
