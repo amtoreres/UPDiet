@@ -67,15 +67,12 @@ $(document).ready(function(){
     $("#edit-submit").attr("disabled", false);
 
     $(".form-content").on("input", "#name", function(){
-        if($("#name").val() == $db_nm) 
-            is_valid_nm = true
-        else is_valid_nm = 
-            $("#name").val().match(/^(?!\s).+(?<!\s)$/) ? true : false;
-            
+        is_valid_nm = $("#name").val().match(/^(?!\s).+(?<!\s)$/) ? true : false;
+
         msg = is_valid_nm ? "" : "Invalid store name.";
 
         // check if store name exists
-        if(is_valid_nm){
+        if(is_valid_nm && $("#name").val() != db_nm){
             $.post("../backend/a_name_check.php", {"name": $("#name").val()}, function(d,s){
                 //console.log(s);
                 var r = JSON.parse(d);
