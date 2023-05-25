@@ -33,7 +33,7 @@
                 <div class="navbar">
                     <a href="" class="nav-active">Home</a>
                     <a href="../admin/">Admin</a>
-                    <a href="#">About</a>
+                    <a href="about.php">About</a>
                 </div>
             </div>
             <div class="nav-content">
