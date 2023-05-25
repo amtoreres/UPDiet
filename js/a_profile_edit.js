@@ -95,7 +95,7 @@ $(document).ready(function(){
     });
 
     $(".form-content").on("input", "#location", function(){
-        is_valid_loc = $("#is_valid_loc").val() != "";
+        is_valid_loc = $("#location").val() != "";
 
         verify_form();
     });
