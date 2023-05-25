@@ -11,6 +11,7 @@
 
     if(isset($_POST["checkout"])) {
         $loc = mysqli_real_escape_string($db, $_POST["location"]);
+        $rem = mysqli_real_escape_string($db, $_POST["remarks"]);
         $uid = $_SESSION["user"]["u_id"];
 
         $q = "INSERT INTO purchase (u_id) VALUES ($uid);";
@@ -40,8 +41,13 @@
                 $resm = $db->query($q);
                 $rowm2 = mysqli_fetch_array($resm);
 
+                $f_food = mysqli_real_escape_string($db, $rowm["name"]);
+                $f_stor = mysqli_real_escape_string($db, $rowm2["name"]);
+
+
                 $q = "INSERT INTO purchase_info (t_id, order_status, food_name, store_name, price, quantity, food_img, store_id, menu_id) 
-                      VALUES ($tid, 'Pending', '".$rowm["name"]."', '".$rowm2["name"]."', ".$rowm["price"].", ".$row["quantity"].", '".$rowm["img"]."', ".$rowm["u_id"].", ".$mid.");";
+                      VALUES ($tid, 'Pending', '$f_food', '$f_stor', ".$rowm["price"].", ".$row["quantity"].", '".$rowm["img"]."', ".$rowm["u_id"].", ".$mid.");";
+                //echo $q;
                 $res4 = $db->query($q);
             }
         }
@@ -50,16 +56,13 @@
         $resd = $db->query($q);
         $rowd = mysqli_fetch_array($resd);
 
-        $q = "UPDATE purchase SET item_count=$itm, location='$loc', remarks='".$_POST["remarks"]."' WHERE t_id=$tid;";
+        $q = "UPDATE purchase SET item_count=$itm, location='$loc', remarks='$rem' WHERE t_id=$tid;";
         $res5 = $db->query($q);
 
         $q = "DELETE FROM customer_cart WHERE u_id=$uid;";
         $res6 = $db->query($q);
 
-        $r = new resp();
-        $r->t_id = $tid;
-
-        echo json_encode($r);
+        echo json_encode(array("t_id"=>$tid));
     }
 
 ?>

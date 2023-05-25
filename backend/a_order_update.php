@@ -14,9 +14,10 @@
 
         $q = "UPDATE purchase_info SET order_status='$ord'";
 
-        if(strcmp($ord, "Cancelled") || strcmp($ord, "On Delivery")) {
+        if($ord == "Cancelled" || $ord == "On Delivery") {
             $q .= ", is_notify=1";
         }
+        
         
         $q .= " WHERE ti_id=$tiid;";
         $res = $db->query($q);

@@ -67,7 +67,11 @@ $(document).ready(function(){
     $("#edit-submit").attr("disabled", false);
 
     $(".form-content").on("input", "#name", function(){
-        is_valid_nm = $("#name").val().match(/^(?!\s).+(?<!\s)$/) ? true : false;
+        if($("#name").val() == $db_nm) 
+            is_valid_nm = true
+        else is_valid_nm = 
+            $("#name").val().match(/^(?!\s).+(?<!\s)$/) ? true : false;
+            
         msg = is_valid_nm ? "" : "Invalid store name.";
 
         // check if store name exists

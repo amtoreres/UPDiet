@@ -147,6 +147,7 @@ $(document).ready(function(){
         };
 
         $.post("../backend/d_cart_order.php", k, function(d,s){
+            console.log(d);
             var r = JSON.parse(d);
             recent_t_id = `t-${r["t_id"]}`;
 
